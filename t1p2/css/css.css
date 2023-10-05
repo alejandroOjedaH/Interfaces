@@ -1,10 +1,54 @@
 #header{
     padding-top: 16px;
     padding-left: 24px;
-    padding-bottom: 8px;
+    float: left;
 }
 #logo{
     float: left;
+}
+a{
+    text-decoration: none;
+}
+#header a{
+    float: right;
+}
+#inicio, #inicio:visited{
+    padding-left: 17px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 17px;
+    color: white;
+    background-color: #0097fb;
+    border-radius: 5px;
+}
+#registro, #registro:visited{
+    color: #0097fb;
+    padding-left: 17px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-right: 17px;
+}
+#separador{
+    margin-top: 16px;
+    background-color: #9b948e;
+    float: left;
+    height: 1px;
+    width: 100%;
+    clear: both;
+}
+#rosaliaico{
+    float: left;
+    width: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+#header{
+    float: left;
+}
+#menu{
+    float: right;
+    width: 42px;
+    padding-top: 10px;
 }
 @media only screen and (min-width: 350px) {
     
