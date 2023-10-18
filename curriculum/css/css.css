@@ -1,0 +1,12 @@
+a, h1{
+    font-family: 'indie-flower';
+}
+
+@font-face {
+    font-family: "indie-flower";
+    src: url('../font/IndieFlower-Regular.ttf')
+}
+
+#usuarioFoto{
+    width: 10px;
+}
