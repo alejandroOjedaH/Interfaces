@@ -1,12 +1,38 @@
-a, h1{
+*{
     font-family: 'indie-flower';
+    background-color: #FDFFA9;
+    text-align: inherit;
 }
-
+p{
+    font-size: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
 @font-face {
     font-family: "indie-flower";
     src: url('../font/IndieFlower-Regular.ttf')
 }
-
+.nombre{
+    font-size: 35px;
+    margin-top: 40px;
+}
 #usuarioFoto{
-    width: 10px;
+    width: 35%;
+    margin-top: 40px;
+    text-align: center;
+}
+h2{
+    color:#FF5C00;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#correoico{
+    width: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#telefonoico{
+    width: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
