@@ -1,7 +1,7 @@
 *{
     font-family: 'indie-flower';
     background-color: #FDFFA9;
-    text-align: inherit;
+    text-align: center;
 }
 p{
     font-size: 25px;
@@ -23,16 +23,22 @@ p{
 }
 h2{
     color:#FF5C00;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 #correoico{
-    width: 20px;
+    width: 30px;
     margin-left: 20px;
     margin-right: 20px;
 }
 #telefonoico{
-    width: 20px;
+    width: 30px;
     margin-left: 20px;
     margin-right: 20px;
+}
+.linea{
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 30px;
+    width: 100%;
 }

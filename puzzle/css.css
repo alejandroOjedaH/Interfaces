@@ -1,0 +1,26 @@
+img{
+    opacity: 0.4;
+    transition: opacity 0.3s;
+}
+img:hover{
+    opacity: 1;
+}
+
+#izar{
+    position: absolute;
+    top: 0px;
+}
+#derar{
+    position: absolute;
+    top: 0px;
+    left: 97px;
+}
+#izab{
+    position: absolute;
+    top: 126px;
+}
+#derab{
+    position: absolute;
+    top: 90px;
+  left: 134px;
+}

@@ -1,0 +1,12 @@
+img{
+    opacity: 0.4;
+    transition: opacity 0.3s;
+}
+img:hover{
+    opacity: 1;
+}
+
+.comic{
+    display: flex;
+    flex-direction: row;
+}
