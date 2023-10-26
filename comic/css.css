@@ -1,11 +1,46 @@
-img{
-    opacity: 0.4;
-    transition: opacity 0.3s;
+#comic1{
+    transition: transform 3s;
 }
-img:hover{
-    opacity: 1;
+#comic1:hover{
+    transform: scale(2);
 }
-
+#comic2{
+    transition: opacity 2s;
+}
+#comic2:hover{
+    opacity: 0%;
+} 
+.vinnetas{
+    display: flex;
+    flex-direction: row;
+}
+#comic3{    
+    transition: margin-left 4s, opacity 3s;
+}
+#comic3:hover{
+    margin-left: 100%;
+    opacity: 0%;
+}
+#comic4{
+    transition: transform 2s;
+    transform-origin: top right;
+}
+#comic4:hover{
+    transform: scale(0.000000000001);
+}
+#comic5{
+    transition: transform 3s;
+}
+#comic6{
+    transform-origin: bottom left;
+    transition: transform 3s;
+}
+.ultimo:hover #comic5{
+    transform: rotate(-180deg);
+}
+.ultimo:hover #comic6{
+    transform: scale(1.2);
+}
 .comic{
     display: flex;
     flex-direction: row;
