@@ -1,0 +1,50 @@
+body{
+    background-color: coral;
+}
+.ramenarriba{
+    position: absolute;
+}
+.frio{
+    position: absolute;
+}
+.hecho{
+    position: absolute;
+    opacity: 0;
+}
+.calor{
+    position: absolute;
+    opacity: 0;
+}
+.ramenabajo{
+    position: absolute;
+}
+.hogera{
+    position: absolute;
+    top: 50px;
+    left:30px;
+}
+.hogeraimagen{
+    width: 500px;
+    transition: content 5s;
+}
+.general:hover .hogeraimagen{
+    content: url("hogera/hogeracompleta.png");
+}
+.humo{
+    opacity: 0;
+    position: absolute;
+    
+}
+.general:hover .humo{
+    transition: opacity 5s;
+    opacity: 1;
+}
+.general:hover .hecho{
+    transition: opacity 10s;
+    opacity: 1;
+}
+
+.general:hover .calor{
+    transition: opacity 20s;
+    opacity: 1;
+}
