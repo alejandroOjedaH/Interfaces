@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+}
+
+.game-container {
+    text-align: center;
+}
+
+input, select, button {
+    margin: 10px;
+    padding: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    background-color: #333
+}
+#recursos{
+    display: flex;
+    flex-direction: column;
+}
+
+ #motor{
+    position: fixed;
+    bottom: 0;
+ }

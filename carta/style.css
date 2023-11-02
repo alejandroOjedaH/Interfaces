@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+}
+#carta{
+    width: 300px;
+    transition: transform 0.5s;
+}
+
+#carta:hover{
+    transform: rotateY(180deg);
+}
+#carta:hover #trasera{
+    opacity: 0;
+}
+
+#liliana{
+    margin: 0 auto;
+    width: 300px;
+    height: 419px;
+    background: url("liliana.png");
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+#emrakul{
+    margin: 0 auto;
+    width: 300px;
+    height: 419px;
+    background: url("emrakul.jpg");
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+#decimodoctor{
+    margin: 0 auto;
+    width: 300px;
+    height: 419px;
+    background: url("decimodoctor.jpg");
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+#trasera{
+    margin: 0 auto;
+    width: 300px;
+    height: 419px;
+    background: url("mtg.jpg");
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s;
+}
+
