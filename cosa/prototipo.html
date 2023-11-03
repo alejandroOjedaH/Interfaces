@@ -13,17 +13,23 @@
         <form id="main-screen-form">
             <div id="header">
                 <div id="recursos">
-                    <label>Supervivientes:</label>
-                    <meter id="survivor-meter" min="0" max="100" value="50"></meter><br>
-                    <label>Energía:</label>
-                    <meter id="energy-meter" min="0" max="100" value="50"></meter><br>
-                    <label>Integridad del casco:</label>
-                    <meter id="damage-meter" min="0" max="100" value="25"></meter><br>
+                    <div>
+                        <label>Supervivientes:</label>
+                        <meter id="survivor-meter" min="0" max="100" value="50"></meter><br>
+                    </div>
+                    <div>
+                        <label>Energía:</label>
+                        <meter id="energy-meter" min="0" max="100" value="50"></meter><br>
+                    </div>
+                    <div>
+                        <label>Integridad del casco:</label>
+                        <meter id="damage-meter" min="0" max="100" value="25"></meter><br>
+                    </div>
                 </div>
                 <div>
                     <h2>Pantalla Principal</h2>
                     <label>Tiempo hasta el próximo escaneo Cylon:</label>
-                    <input type="time" name="eta"><br>
+                    <input type="time" name="eta" id="eta" disabled="false"><br>
                 </div>
                 <div>
                     <button type="button" onclick="mostrarEscudoInterface()">Escudo</button>

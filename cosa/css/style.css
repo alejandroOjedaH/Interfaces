@@ -26,7 +26,7 @@ button {
     justify-content: space-between;
     position: fixed;
     top: 0;
-    background-color: #333
+    left: 25%;
 }
 #recursos{
     display: flex;
@@ -36,4 +36,10 @@ button {
  #motor{
     position: fixed;
     bottom: 0;
+    left: 35%;
+ }
+ #shield-interface, #propulsor-interface,#arma-interface,#tripulacion-interface,#motor-salto-interface{
+    position: fixed;
+    top: 20%;
+    left: 40%;
  }
