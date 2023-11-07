@@ -13,17 +13,23 @@
         <form id="main-screen-form">
             <div id="header">
                 <div id="recursos">
-                    <label>Supervivientes:</label>
-                    <meter id="survivor-meter" min="0" max="100" value="50"></meter><br>
-                    <label>Energía:</label>
-                    <meter id="energy-meter" min="0" max="100" value="50"></meter><br>
-                    <label>Integridad del casco:</label>
-                    <meter id="damage-meter" min="0" max="100" value="25"></meter><br>
+                    <div>
+                        <label>Supervivientes:</label>
+                        <meter id="survivor-meter" min="0" max="100"></meter><span id="survivor-meter-number"></span><br>
+                    </div>
+                    <div>
+                        <label>Energía:</label>
+                        <meter id="energy-meter" min="0" max="100"></meter><span id="energy-meter-number"></span><br>
+                    </div>
+                    <div>
+                        <label>Integridad del casco:</label>
+                        <meter id="damage-meter" min="0" max="100"></meter><span id="damage-meter-number"></span><br>
+                    </div>
                 </div>
                 <div>
                     <h2>Pantalla Principal</h2>
                     <label>Tiempo hasta el próximo escaneo Cylon:</label>
-                    <input type="time" name="eta"><br>
+                    <input id="reloj" type="time" name="eta" disabled="true"><br>
                 </div>
                 <div>
                     <button type="button" onclick="mostrarEscudoInterface()">Escudo</button>
@@ -35,11 +41,18 @@
             </div>
             <div id="motor">
                 <label>Recalentamiento del motor de salto:</label>
-                <progress id="jump-progress" max="100" value="75"></progress><button type="button" onclick="ocultarTodasLasInterfaces()">SALTO DE EMERGENCIA</button><br>
+                <progress id="jump-progress" max="100"></progress><span id="jump-progress-number"></span><button type="button" onclick="saltoEmergencia()"></span>SALTO DE EMERGENCIA</button><br>
             </div>
             
         </form>
 
+        <!--Botones de ubicacion-->
+        <form id="ubicacion-nav">
+            <button type="button" id="ubi1">Ubicacion 1</button>
+            <button type="button" id="ubi2">Ubicacion 2</button>
+            <button type="button" id="ubi3">Ubicacion 3</button>
+            <button type="button" id="ubi4">Ubicacion 4</button>
+        </form>
         <!-- Interfaz del Escudo -->
         <form id="shield-interface" style="display: none;">
             <h2>Interfaz del Escudo</h2>
@@ -56,13 +69,13 @@
 			<meter id="energy-meter" min="0" max="100" value="50"></meter><br>
 			
             <label for="proa-shield">Proa:</label>
-            <input type="range" id="proa-shield" min="0" max="100"><br>
+            <input type="range" id="proa-shield" min="0" max="100" value="25"><br>
             <label for="popa-shield">Popa:</label>
-            <input type="range" id="popa-shield" min="0" max="100"><br>
+            <input type="range" id="popa-shield" min="0" max="100" value="25"><br>
             <label for="babor-shield">Babor:</label>
-            <input type="range" id="babor-shield" min="0" max="100"><br>
+            <input type="range" id="babor-shield" min="0" max="100" value="25"><br>
             <label for="estribor-shield">Estribor:</label>
-            <input type="range" id="estribor-shield" min="0" max="100"><br>
+            <input type="range" id="estribor-shield" min="0" max="100" value="25"><br>
             <button type="button">Igualar Todos</button>
             <button type="button" onclick="ocultarTodasLasInterfaces()">Volver</button>
         </form>
@@ -80,12 +93,12 @@
             </select><br>
             
 			<label>Energía:</label>
-			<meter id="energy-meter" min="0" max="100" value="50"></meter><br>
+			<meter id="energy-meter" min="0" max="100" ></meter><br>
 			
             <label for="speed-slider">Velocidad:</label>
-            <input type="range" id="speed-slider" min="0" max="1000"><br>
-            <button type="button">+100 km/h</button>
-            <button type="button">-100 km/h</button><br>
+            <input type="range" id="speed-slider" min="0" max="1000" value="100"><br>
+            <button type="button" id="sumarVel">+100 km/h</button>
+            <button type="button" id="restarVel">-100 km/h</button><br>
             <label for="direction-slider">Dirección:</label>
             <input type="range" id="direction-slider" min="-180" max="180"><br>
             <button type="button">Girar Izquierda</button>
@@ -107,14 +120,14 @@
 			<label>Energía:</label>
 			<meter id="energy-meter" min="0" max="100" value="50"></meter><br>
 			 
-            <input type="radio" id="weapon1" name="weapon">
+            <input type="radio" id="weapon1" name="weapon" checked>
             <label for="weapon1">Láseres</label><br>
             <input type="radio" id="weapon2" name="weapon">
             <label for="weapon2">Misiles Nucleares</label><br>
-            <meter id="ammunition-meter" min="0" max="100" value="50"></meter><br>
-            <button type="button">Disparar</button>
-            <button type="button">Recargar</button><br>
-            <button type="button">Cambiar Arma</button>
+            <meter id="ammunition-meter" min="0" max="20"></meter><span id="ammunition-meter-number"></span><br>
+            <button type="button" id="disparar">Disparar</button>
+            <button type="button" id="recargarLase">Recargar</button><br>
+            <button type="button" id="cambiarArma">Cambiar Arma</button>
             <button type="button" onclick="ocultarTodasLasInterfaces()">Volver</button>
         </form>
 
@@ -157,10 +170,24 @@
 			<label>Energía:</label>
 			<meter id="energy-meter" min="0" max="100" value="50"></meter><br>
 			<label for="proa-shield">Refrigerar motor:</label>
-            <input type="range" id="" min="0" max="10"><br>
+            <input type="range" id="refrigerar" min="0" max="10"><span id="refrigerar-number"></span><br>
 			
               <button type="button" onclick="ocultarTodasLasInterfaces()">Saltar</button>
         </form>
+        <div id="modalRecursos" class="invisible">
+            <span>Has conseguido Supervivientes, Energía, Integridad del casco y número de misiles</span>
+            <ul>
+                <li>Supervivientes: 10</li>
+                <li>Energía: 10</li>
+                <li>Integridad del casco: 10</li>
+                <li>Número de misiles: 2</li>
+            </ul>
+            <button type="button" id="recursosAceptar">Aceptar</button>
+        </div>
+        <div id="modalCombate" class="invisible">
+            <span>Te has encontrado con unos enemigos</span><br>
+            <button type="button" id="batallaAceptar">Aceptar</button>
+        </div>
     </div>
     <script src="js/principal.js"></script>    
 </body>
