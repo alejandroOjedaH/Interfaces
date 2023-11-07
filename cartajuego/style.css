@@ -13,7 +13,7 @@ body{
     opacity: 0;
 }
 
-.liliana{
+#liliana{
     margin: 0 auto;
     width: 300px;
     height: 419px;
@@ -26,7 +26,7 @@ body{
     background-position: center;
     transform: rotateY(180deg);
 }
-.emrakul{
+#emrakul{
     margin: 0 auto;
     width: 300px;
     height: 419px;
@@ -40,7 +40,7 @@ body{
     transform: rotateY(180deg);
 }
 
-.decimodoctor{
+#decimodoctor{
     margin: 0 auto;
     width: 300px;
     height: 419px;
@@ -53,7 +53,45 @@ body{
     background-position: center;
     transform: rotateY(180deg);
 }
-
+#counterspell{
+    margin: 0 auto;
+    width: 300px;
+    height: 419px;
+    background: url("counter.jpg");
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+#montananevada{
+    margin: 0 auto;
+    width: 300px;
+    height: 419px;
+    background: url("liliana.png");
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+#ira{
+    margin: 0 auto;
+    width: 300px;
+    height: 419px;
+    background: url("ira.jpg");
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotateY(180deg);
+}
 .trasera{
     margin: 0 auto;
     width: 300px;
@@ -67,4 +105,3 @@ body{
     background-position: center;
     transition: opacity 0.3s;
 }
-

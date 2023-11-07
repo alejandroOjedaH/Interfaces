@@ -41,5 +41,13 @@ button {
  #shield-interface, #propulsor-interface,#arma-interface,#tripulacion-interface,#motor-salto-interface{
     position: fixed;
     top: 20%;
-    left: 40%;
+    right: 10%;
  }
+#ubicacion-nav{
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    top: 40%;
+    left: 10%;
+}
