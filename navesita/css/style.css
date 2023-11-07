@@ -26,16 +26,23 @@ button {
     justify-content: space-between;
     position: fixed;
     top: 0;
+<<<<<<< HEAD:cosa/css/style.css
     left: 25%;
+=======
+    left:25%;
+    background-color: #333
+>>>>>>> 81593809ce7cfc9b68116993987c08266dbf4a5f:navesita/css/style.css
 }
 #recursos{
     display: flex;
     flex-direction: column;
 }
 
- #motor{
+#motor{
+    left:35%;
     position: fixed;
     bottom: 0;
+<<<<<<< HEAD:cosa/css/style.css
     left: 35%;
  }
  #shield-interface, #propulsor-interface,#arma-interface,#tripulacion-interface,#motor-salto-interface{
@@ -50,4 +57,31 @@ button {
     width: 300px;
     top: 40%;
     left: 10%;
+=======
+ }
+ #ubicacion-nav{
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 40%;
+    left: 5%;
+ }
+#shield-interface,#propulsor-interface,#arma-interface,#tripulacion-interface,#motor-salto-interface{
+    position: fixed;
+    top: 30%;
+    right: 5%;
+}
+
+.invisible{
+    display: none;
+}
+.visible{
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 35%;
+    top: 30%;
+>>>>>>> 81593809ce7cfc9b68116993987c08266dbf4a5f:navesita/css/style.css
 }
