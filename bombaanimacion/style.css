@@ -1,0 +1,70 @@
+body{
+    background-image: url("japom.webp");
+    background-repeat: no-repeat;
+    background-color: #f8f5f4;
+    background-size: auto;
+    animation: fondoradio 2s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 7.5s;
+ }
+
+#bomba{
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    width: 10%;
+    animation: lanzamiento 4s 1;
+}
+#explosion{
+    opacity: 0;
+    position: absolute;
+    width: 10%;
+    left: 300px;
+    top: 300px;
+    animation: explotar 4s 1;
+    animation-delay: 4s;
+    transform-origin: bottom;
+}
+#radioactividad{
+    opacity: 0;
+    position: absolute;
+    width: 10%;
+    left: 300px;
+    top: 300px;
+    animation: radio 2s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 7.5s;
+}
+#gota{
+    opacity: 0;
+    position: absolute;
+    left: 360px;
+    top: 450px;
+    width: 60px;
+    height: 60px;
+    border: solid 1px gray;
+    border-radius: 100%;
+    animation: expandir 4s 1;
+    animation-delay: 4s;
+}
+@keyframes expandir {
+    0%{scale: 0.1;}
+    50%{opacity: 1;}
+    100%{scale: 15; opacity: 0;}
+}
+@keyframes lanzamiento {
+    0%{opacity: 1;}
+    100%{opacity:1; top: 400px;}
+}
+@keyframes explotar {
+    0%{opacity: 1;}
+    70%{opacity: 1;}
+    100%{opacity: 0; scale: 2;}
+}
+@keyframes fondoradio{
+    100%{background-color: yellowgreen;}
+}
+@keyframes radio{
+    100%{opacity: 1;}
+}
