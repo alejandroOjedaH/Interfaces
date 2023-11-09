@@ -1,0 +1,45 @@
+#fondo{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 1920px;
+}
+#puente{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 1920px;
+}
+#completa{
+    position: absolute;
+    top:950px;
+    left: -360px;
+    animation: moverbarca 32s infinite;
+    width: fit-content;
+}
+#gondola{
+    position: absolute;
+    top:0px;
+    width: 500px;
+}
+#palo{
+    position: absolute;
+    top:-175px;
+    left: -130px;
+    width: 500px;
+    transform: rotateY(180deg);
+    animation: moveremo 6.4s infinite;
+}
+@keyframes moverbarca {
+    0%{left: -360px;}
+    20%{left: 96px;}
+    40%{left: 552px;}
+    60%{left: 1008px;}
+    80%{left: 1464px;}
+    100%{left: 1920px;}
+}
+@keyframes moveremo{
+    0%{transform: rotateY(180deg);}
+    50%{transform: rotateY(0deg);}
+    100%{transform: rotateY(180deg);}
+}
