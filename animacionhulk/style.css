@@ -16,6 +16,9 @@ body{
     left: 1300px;
     z-index: 1;
     width: 300px;
+    animation: desaparecer 2s 1;
+    animation-delay: 3.6s;
+    animation-fill-mode: forwards;
 }
 
 #brujaescarlata{
@@ -27,6 +30,9 @@ body{
     width: 300px;
     transform: rotateY(180deg);
     opacity: 0;
+    animation: reaparecer 2s 1;
+    animation-delay: 3.6s;
+    animation-fill-mode: forwards;
 }
 
 #explosion{
@@ -37,7 +43,7 @@ body{
     z-index: 2;
     transform: scale(0);
     animation: explotar 2s 1;
-    animation-delay: 3.8s;
+    animation-delay: 3.6s;
 }
 
 #estraño{
@@ -51,10 +57,18 @@ body{
 
 @keyframes avancestraño {
     33%{transform: rotateZ(40deg);}
-    95%{left: 1100px; transform: rotateZ(40deg);}
+    95%{left: 1000px; transform: rotateZ(40deg);}
     100%{left: -500px; transform: rotateZ(-180deg);}
 }
 
 @keyframes explotar {
     100%{transform:scale(1)}
+}
+
+@keyframes desaparecer{
+    100%{opacity: 0; transform: rotateZ(360deg);}
+}
+@keyframes reaparecer {
+    0%{transform: rotateY(180deg);}
+    100%{opacity: 1; transform: rotate3d(1,0.5,0,360deg);}
 }
