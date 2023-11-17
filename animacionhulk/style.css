@@ -28,7 +28,6 @@ body{
     z-index: 1;
     opacity: 0px;
     width: 300px;
-    transform: rotateY(180deg);
     opacity: 0;
     animation: reaparecer 2s 1;
     animation-delay: 3.6s;
@@ -55,6 +54,31 @@ body{
     animation-fill-mode: forwards;
 }
 
+#sangre{
+    position: absolute;
+    top: 400px;
+    left: -300px;
+    width: 300px;
+    transform: rotateZ(50deg);
+    z-index: 2;
+    animation: salirsangre 1.3s 1;
+    animation-delay: 4.4s;
+}
+
+#charco{
+    position: absolute;
+    top: 850px;
+    left: 200px;
+    width: 300px;
+    z-index: 2;
+    transform: scale(0,0);
+    animation: aumentarcharco 0.5s 1;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+
+
 @keyframes avancestraño {
     33%{transform: rotateZ(40deg);}
     95%{left: 1000px; transform: rotateZ(40deg);}
@@ -69,6 +93,12 @@ body{
     100%{opacity: 0; transform: rotateZ(360deg);}
 }
 @keyframes reaparecer {
-    0%{transform: rotateY(180deg);}
-    100%{opacity: 1; transform: rotate3d(1,0.5,0,360deg);}
+    100%{opacity: 1; transform: rotateZ(360deg);}
+}
+
+@keyframes salirsangre {
+    100%{transform: rotateZ(170deg) scale(0.5,0.5); left: 200px; top: 800px;}
+}
+@keyframes aumentarcharco {
+    100%{transform: scale(1,1);}
 }
