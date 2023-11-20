@@ -169,11 +169,11 @@ window.onload= () =>{
         motor.value=motorcont;
         motorNumber.innerText=motorcont;
         if(motorcont>=50){
-            motorcapsule.style= " background-color: red";
+            //motorcapsule.style= " background-color: red";
         } else if(motorcont>=25){
-            motorcapsule.style= " background-color: yellow";
+            //motorcapsule.style= " background-color: yellow";
         }else if(motorcont>=0){
-            motorcapsule.style = " background-color: green";
+            //motorcapsule.style = " background-color: green";
         }
         let t = setTimeout(function(){ setearMotor() }, 1000);
     }
@@ -308,27 +308,44 @@ function mostrarImagen(ruta,segundos){
 
 function mostrarEscudoInterface() {
     ocultarTodasLasInterfaces();
+    document.getElementById("shield-interface").classList.remove("ocultarmenu");
     document.getElementById("shield-interface").classList.add("mostrarmenu");
 }
 
 function mostrarPropulsorInterface() {
     ocultarTodasLasInterfaces();
+    document.getElementById("propulsor-interface").classList.remove("ocultarmenu");
     document.getElementById("propulsor-interface").classList.add("mostrarmenu");
 }
 
 function mostrarArmaInterface() {
     ocultarTodasLasInterfaces();
+    document.getElementById("arma-interface").classList.remove("ocultarmenu");
     document.getElementById("arma-interface").classList.add("mostrarmenu");
 }
 
 function mostrarMotorSaltoInterface() {
     ocultarTodasLasInterfaces();
+    document.getElementById("motor-salto-interface").classList.remove("ocultarmenu");
     document.getElementById("motor-salto-interface").classList.add("mostrarmenu");
 }
 
 function ocultarTodasLasInterfaces() {
-    document.getElementById("shield-interface").classList.remove("mostrarmenu");
-    document.getElementById("propulsor-interface").classList.remove("mostrarmenu");
-    document.getElementById("arma-interface").classList.remove("mostrarmenu");
-    document.getElementById("motor-salto-interface").classList.remove("mostrarmenu");
+
+    if(document.getElementById("shield-interface").classList.contains("mostrarmenu")){
+        document.getElementById("shield-interface").classList.add("ocultarmenu");
+        document.getElementById("shield-interface").classList.remove("mostrarmenu");
+    }
+    if(document.getElementById("propulsor-interface").classList.contains("mostrarmenu")){
+        document.getElementById("propulsor-interface").classList.add("ocultarmenu");
+        document.getElementById("propulsor-interface").classList.remove("mostrarmenu");
+    }
+    if(document.getElementById("arma-interface").classList.contains("mostrarmenu")){
+        document.getElementById("arma-interface").classList.add("ocultarmenu");
+        document.getElementById("arma-interface").classList.remove("mostrarmenu");
+    }
+    if(document.getElementById("motor-salto-interface").classList.contains("mostrarmenu")){
+        document.getElementById("motor-salto-interface").classList.add("ocultarmenu");
+        document.getElementById("motor-salto-interface").classList.remove("mostrarmenu");
+    }
 }
