@@ -253,7 +253,7 @@ window.onload= () =>{
             amarillo.classList.add("amarillo");
         }else if(minuto == "00" && segundo == "10"){
             rojo.classList.add("rojo");
-        }else{
+        }else if(segundo == "15" || segundo == "45"){
             amarillo.classList.remove("amarillo");
             rojo.classList.remove("rojo");
         }
@@ -280,17 +280,19 @@ window.onload= () =>{
     
     function mostrarTarjetas(id){
         const tarjeta =document.getElementById("ubi"+id+"-panel");
-        if(tarjeta.style.display!="block"){
-            tarjeta.style.display="block";
+        if(tarjeta.style.transform!="scale(1, 1)"){
+            tarjeta.style.transform="scale(1,1)";
+            tarjeta.style.opacity="1";
         }else{
-            tarjeta.style.display="none";
+            tarjeta.style.transform="scale(1,0)";
+            tarjeta.style.opacity="0";
         }
     }
 }
 
 function saltoEmergencia(){
-    mostrarImagen("./img/warp.gif",4);
     if (motorcont <= 0) {
+        mostrarImagen("./img/warp.gif",4);
         sessionStorage.setItem("supervivientes", sessionStorage.getItem("supervivientes")-30);
         sessionStorage.setItem("energia", sessionStorage.getItem("energia")-30);
         sessionStorage.setItem("integridad", sessionStorage.getItem("integridad")-30);
@@ -306,44 +308,27 @@ function mostrarImagen(ruta,segundos){
 
 function mostrarEscudoInterface() {
     ocultarTodasLasInterfaces();
-    document.getElementById("shield-interface").style.height = "50%";
-    document.getElementById("shield-interface").style.padding = "15px";
+    document.getElementById("shield-interface").classList.add("mostrarmenu");
 }
 
 function mostrarPropulsorInterface() {
     ocultarTodasLasInterfaces();
-    document.getElementById("propulsor-interface").style.height = "50%";
-    document.getElementById("propulsor-interface").style.padding = "15px";
+    document.getElementById("propulsor-interface").classList.add("mostrarmenu");
 }
 
 function mostrarArmaInterface() {
     ocultarTodasLasInterfaces();
-    document.getElementById("arma-interface").style.height = "50%";
-    document.getElementById("arma-interface").style.padding = "15px";
-}
-
-function mostrarTripulacionInterface() {
-    ocultarTodasLasInterfaces();
-    document.getElementById("tripulacion-interface").style.height = "50%";
-    document.getElementById("tripulacion-interface").style.padding = "15px";
+    document.getElementById("arma-interface").classList.add("mostrarmenu");
 }
 
 function mostrarMotorSaltoInterface() {
     ocultarTodasLasInterfaces();
-    document.getElementById("motor-salto-interface").style.height = "50%";
-    document.getElementById("motor-salto-interface").style.padding = "15px";
+    document.getElementById("motor-salto-interface").classList.add("mostrarmenu");
 }
 
 function ocultarTodasLasInterfaces() {
-    document.getElementById("shield-interface").style.height = "0px";
-    document.getElementById("propulsor-interface").style.height = "0px";
-    document.getElementById("arma-interface").style.height = "0px";
-    document.getElementById("tripulacion-interface").style.height = "0px";
-    document.getElementById("motor-salto-interface").style.height = "0px";
-
-    document.getElementById("shield-interface").style.padding = "0px";
-    document.getElementById("propulsor-interface").style.padding = "0px";
-    document.getElementById("arma-interface").style.padding = "0px";
-    document.getElementById("tripulacion-interface").style.padding = "0px";
-    document.getElementById("motor-salto-interface").style.padding = "0px";
+    document.getElementById("shield-interface").classList.remove("mostrarmenu");
+    document.getElementById("propulsor-interface").classList.remove("mostrarmenu");
+    document.getElementById("arma-interface").classList.remove("mostrarmenu");
+    document.getElementById("motor-salto-interface").classList.remove("mostrarmenu");
 }

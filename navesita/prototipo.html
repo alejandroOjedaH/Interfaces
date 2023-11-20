@@ -8,10 +8,9 @@
 
 </head>
 <body>
-    <div class="game-container>
-        <!-- Pantalla Principal -->
+    <div class="game-container">
+        <!--Botones de ubicacion-->
         <form id="main-screen-form">
-            <div id="header">
                 <div id="recursos">
                     <div>
                         <label>Supervivientes:</label>
@@ -25,20 +24,17 @@
                         <label>Integridad del casco:</label>
                         <meter id="damage-meter" min="0" max="100"></meter><span id="damage-meter-number" class="recursos"></span><br>
                     </div>
+                    <div>
+                        <label>Tiempo hasta el próximo escaneo Cylon:</label>
+                        <input id="reloj" type="time" name="eta" disabled="true"><br>
+                    </div>
                 </div>
-                <div>
-                    <h2>Pantalla Principal</h2>
-                    <label>Tiempo hasta el próximo escaneo Cylon:</label>
-                    <input id="reloj" type="time" name="eta" disabled="true"><br>
-                </div>
-                <div>
+                <div id="botones">
                     <button type="button" onclick="mostrarEscudoInterface()">Escudo</button>
                     <button type="button" onclick="mostrarPropulsorInterface()">Propulsor</button>
                     <button type="button" onclick="mostrarArmaInterface()">Arma</button>
-                    <button type="button" onclick="mostrarTripulacionInterface()">Tripulación</button>
                     <button type="button" onclick="mostrarMotorSaltoInterface()">Motor de Salto</button>
                 </div>
-            </div>
             <div id="motor">
                 <label>Recalentamiento del motor de salto:</label>
                 <progress id="jump-progress" max="100"></progress><span id="jump-progress-number"></span><button type="button" onclick="saltoEmergencia()"></span>SALTO DE EMERGENCIA</button><br>
@@ -130,30 +126,6 @@
             <button type="button" id="disparar">Disparar</button>
             <button type="button" id="recargarLase">Recargar</button><br>
             <button type="button" id="cambiarArma">Cambiar Arma</button>
-            <button type="button" onclick="ocultarTodasLasInterfaces()">Volver</button>
-        </form>
-
-        <!-- Interfaz de la Tripulación -->
-        <form id="tripulacion-interface">
-              <h2>Interfaz de la Tripulación</h2>
-            <label for="crew-member-name">Nombre:</label>
-            <input type="text" id="crew-member-name"><br>
-            <label for="crew-member-function">Función:</label>
-            <select id="crew-member-function">
-                <option value="disponible">Ingeniero</option>
-                <option value="ocupado">Médico</option>
-                <option value="herido">Militar</option>
-            </select><br>
-            <label for="crew-member-skill">Nivel de Habilidad:</label>
-            <input type="number" id="crew-member-skill" min="0" max="100"><br>
-            <label for="crew-member-status">Estado:</label>
-            <select id="crew-member-status">
-                <option value="disponible">Disponible</option>
-                <option value="ocupado">Ocupado</option>
-                <option value="herido">Herido</option>
-            </select><br>
-			 <label for="crew-member-birthdate">Fecha de Nacimiento:</label>
-            <input type="date" id="crew-member-birthdate"><br>
             <button type="button" onclick="ocultarTodasLasInterfaces()">Volver</button>
         </form>
 

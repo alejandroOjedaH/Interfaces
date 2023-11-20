@@ -11,9 +11,6 @@ body {
     color: #fff;
 }
 
-.game-container {
-    text-align: center;
-}
 
 input, select, button {
     margin: 10px;
@@ -24,19 +21,23 @@ button {
     cursor: pointer;
 }
 
-#header{
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left:25%;
-    background-color: #333
-}
 #recursos{
+    background-color: green;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
+#botones{
+    background-color: green;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
 #motor{
     left:35%;
     position: fixed;
@@ -48,17 +49,19 @@ button {
     height: 100%;
     overflow: hidden;
  }
-#shield-interface,#propulsor-interface,#arma-interface,#tripulacion-interface,#motor-salto-interface{
+#shield-interface,#propulsor-interface,#arma-interface,#motor-salto-interface{
     background-color: #333;
+    padding: 15px;
     position: fixed;
     top: 30%;
-    right: 5%;
+    right: -50%;
     transition: 1s;
     overflow: hidden;
-    height: 0px;
+    transform: scale(1,0);
+    opacity: 0;
 }
 
-#shield-interface,#propulsor-interface,#arma-interface,#tripulacion-interface,#motor-salto-interface,#motor,#header{
+#shield-interface,#propulsor-interface,#arma-interface,#motor-salto-interface,#motor{
     z-index: 10;
 }
 
@@ -72,6 +75,7 @@ button {
     height: 500px;
     left: 35%;
     top: 30%;
+    z-index: 10;
 }
 
 .recursos{
@@ -182,7 +186,10 @@ button {
     top: 20%;
     left: 50%;
     z-index: 9;
-    display: none;
+    transition: 1s;
+    transform-origin: left;
+    transform: scale(1,0);
+    opacity:0;
 }
 
 #ubi2-panel{
@@ -192,7 +199,10 @@ button {
     top: 20%;
     left: 70%;
     z-index: 9;
-    display: none;
+    transition: 1s;
+    transform-origin: left;
+    transform: scale(1,0);
+    opacity:0;
 }
 
 #ubi3-panel{
@@ -202,5 +212,26 @@ button {
     top: 20%;
     right: 70%;
     z-index: 9;
-    display: none;
+    transition: 1s;
+    transform-origin: left;
+    transform: scale(1,0);
+    opacity:0;
+}
+
+.mostrarmenu{
+    animation: mostrarmenuani 1s 1;
+    animation-fill-mode: forwards;
+}
+
+.ocultarmenu{
+    animation: ocultarmenuani 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes mostrarmenuani {
+    100%{transform: scale(1,1); right: 5%; opacity: 1;}
+}
+
+@keyframes ocultarmenuani {
+    100%{transform: scale(1,0); right: 50%; opacity: 0;}
 }
