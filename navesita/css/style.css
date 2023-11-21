@@ -10,9 +10,10 @@ body {
     background-size: 100% 100%;
     color: #fff;
     overflow: hidden;
+    color:#deff72;
 }
 
-input, select, .boton1, .boton2 {
+input, select, .boton1, .volver {
     margin: 10px;
     padding: 10px;
 }
@@ -25,6 +26,11 @@ input, select, .boton1, .boton2 {
     text-align: center;
     color: #8be363;
 }
+.header h2{
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
 
 .content{
     background-image: url("../img/content.png");
@@ -34,9 +40,6 @@ input, select, .boton1, .boton2 {
     margin-left: 5%;
 }
 
-.content *{
-    color:#deff72;
-}
 
 .footer{
     background-image: url("../img/footer.png");
@@ -48,12 +51,12 @@ input, select, .boton1, .boton2 {
 .boton1{
     background-image: url("../img/boton.png");
 }
-.boton2{
+.volver{
     background-image: url("../img/boton2.png");
     color: red;
 }
 
-.boton1, .boton2{
+.boton1, .volver{
     background-size: 100% 100%;
     width: fit-content;
     height: fit-content;
@@ -62,9 +65,14 @@ input, select, .boton1, .boton2 {
     justify-content: center;
 }
 
-.boton1:active, .boton2:active{
+.boton1:active, .volver:active{
     opacity: 0.5;
     color: chocolate;
+}
+
+.volver-container{
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 #recursos{
@@ -94,7 +102,9 @@ input, select, .boton1, .boton2 {
 
 #motor .content{
     display: flex;
+    align-items: center;
  }
+
  #ubicacion-nav{
     position: absolute;
     width: 100%;
