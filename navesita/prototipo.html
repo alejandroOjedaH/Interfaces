@@ -27,17 +27,17 @@
                         </div>
                         <div>
                             <label>Tiempo hasta el próximo escaneo Cylon:</label>
-                            <input id="reloj" type="time" name="eta" disabled="true"><br>
+                            <input id="reloj" type="time" name="eta" id="eta" disabled="true"><br>
                         </div>
                     </div>
                     <div class="footer"></div>
                 </div>
                 <div id="botones">
                     <div class="content">
-                        <button type="button" onclick="mostrarEscudoInterface()">Escudo</button>
-                        <button type="button" onclick="mostrarPropulsorInterface()">Propulsor</button>
-                        <button type="button" onclick="mostrarArmaInterface()">Arma</button>
-                        <button type="button" onclick="mostrarMotorSaltoInterface()">Motor de Salto</button>
+                        <div class="boton1" onclick="mostrarEscudoInterface()">Escudo</div>
+                        <div class="boton1" onclick="mostrarPropulsorInterface()">Propulsor</div>
+                        <div class="boton1" onclick="mostrarArmaInterface()">Arma</div>
+                        <div class="boton1" onclick="mostrarMotorSaltoInterface()">Motor de Salto</div>
                     </div>
                     <div class="footer"></div>
                 </div>
@@ -45,7 +45,7 @@
                 <div class="header"></div>
                 <div class="content">
                     <label>Recalentamiento del motor de salto:</label>
-                    <progress id="jump-progress" max="100"></progress><span id="jump-progress-number"></span><button type="button" onclick="saltoEmergencia()"></span>SALTO DE EMERGENCIA</button><br>
+                    <progress id="jump-progress" max="100"></progress><span id="jump-progress-number"></span><div class="boton1" onclick="saltoEmergencia()"></span>SALTO DE EMERGENCIA</div><br>
                 </div>
             </div>
             
@@ -64,7 +64,7 @@
             
             <div class="content">
                 <label for="crew-member-function">Tripulantes:</label>
-                <button type="button">Añadir tripulante</button>
+                <div class="boton1">Añadir tripulante</div>
                 <select id="crew-member-function">
                     <option value="disponible">Nuc Shazam</option>
                     <option value="ocupado">Salt Peper</option>
@@ -82,8 +82,8 @@
                 <input type="range" id="babor-shield" min="0" max="100" value="25"><br>
                 <label for="estribor-shield">Estribor:</label>
                 <input type="range" id="estribor-shield" min="0" max="100" value="25"><br>
-                <button type="button">Igualar Todos</button>
-                <button type="button" onclick="ocultarTodasLasInterfaces()">Volver</button>
+                <div class="boton1">Igualar Todos</div>
+                <div class="boton2" onclick="ocultarTodasLasInterfaces()">Volver</div>
             </div>
             <div class="footer"></div>
         </form>
@@ -94,7 +94,7 @@
 			
             <div class="content">
                 <label for="crew-member-function">Tripulantes:</label>
-                <button type="button">Añadir tripulante</button>
+                <div class="boton1">Añadir tripulante</div>
                 <select id="crew-member-function">
                     <option value="disponible">Nuc Shazam</option>
                     <option value="ocupado">Salt Peper</option>
@@ -106,13 +106,13 @@
                 
                 <label for="speed-slider">Velocidad:</label>
                 <input type="range" id="speed-slider" min="0" max="1000" value="100"><br>
-                <button type="button" id="sumarVel">+100 km/h</button>
-                <button type="button" id="restarVel">-100 km/h</button><br>
+                <div class="boton1" id="sumarVel">+100 km/h</div>
+                <div class="boton1" id="restarVel">-100 km/h</div><br>
                 <label for="direction-slider">Dirección:</label>
                 <input type="range" id="direction-slider" min="-180" max="180"><br>
-                <button type="button">Girar Izquierda</button>
-                <button type="button">Girar Derecha</button><br>
-                <button type="button" onclick="ocultarTodasLasInterfaces()">Volver</button>
+                <div class="boton1">Girar Izquierda</div>
+                <div class="boton1">Girar Derecha</div><br>
+                <div class="boton2" onclick="ocultarTodasLasInterfaces()">Volver</div>
             </div>
             <div class="footer"></div>
         </form>
@@ -122,7 +122,7 @@
 			 
             <div class="content">
                 <label for="crew-member-function">Tripulantes:</label>
-                <button type="button">Añadir tripulante</button>
+                <div class="boton1">Añadir tripulante</div>
                 <select id="crew-member-function">
                     <option value="disponible">Nuc Shazam</option>
                     <option value="ocupado">Salt Peper</option>
@@ -137,10 +137,10 @@
                 <input type="radio" id="weapon2" name="weapon">
                 <label for="weapon2">Misiles Nucleares</label><br>
                 <meter id="ammunition-meter" min="0" max="20"></meter><span id="ammunition-meter-number"></span><br>
-                <button type="button" id="disparar">Disparar</button>
-                <button type="button" id="recargarLase">Recargar</button><br>
-                <button type="button" id="cambiarArma">Cambiar Arma</button>
-                <button type="button" onclick="ocultarTodasLasInterfaces()">Volver</button>
+                <div class="boton1" id="disparar">Disparar</div>
+                <div class="boton1" id="recargarLase">Recargar</div><br>
+                <div class="boton1" id="cambiarArma">Cambiar Arma</div>
+                <div class="boton2" onclick="ocultarTodasLasInterfaces()">Volver</div>
             </div>
             <div class="footer"></div>
         </form>
@@ -151,7 +151,7 @@
 			
             <div class="content">
                 <label for="crew-member-function">Tripulantes:</label>
-                <button type="button">Añadir tripulante</button>
+                <div class="boton1">Añadir tripulante</div>
                 <select id="crew-member-function">
                     <option value="disponible">Nuc Shazam</option>
                     <option value="ocupado">Salt Peper</option>
@@ -163,7 +163,7 @@
                 <label for="proa-shield">Refrigerar motor:</label>
                 <input type="range" id="refrigerar" min="0" max="10"><span id="refrigerar-number"></span><br>
                 
-                <button type="button" onclick="ocultarTodasLasInterfaces()">Saltar</button>
+                <div class="boton2" onclick="ocultarTodasLasInterfaces()">Saltar</div>
             </div>
             <div class="footer"></div>
         </form>
@@ -177,13 +177,16 @@
                 <li>Integridad del casco: 10</li>
                 <li>Número de misiles: 2</li>
             </ul>
-            <button type="button" id="recursosAceptar">Aceptar</button>
+            <div class="boton1" id="recursosAceptar">Aceptar</div>
         </div>
         <div class="footer"></div>
         </div>
         <div id="modalCombate" class="invisible">
-            <span>Te has encontrado con unos enemigos</span><br>
-            <button type="button" id="batallaAceptar">Aceptar</button>
+            <div class="header"></div>
+            <div class="content"><span>Te has encontrado con unos enemigos</span><br>
+                <div class="boton1" id="batallaAceptar">Aceptar</div>
+            </div>
+            <div class="footer"></div>
         </div>
         <img src="./img/amarillo.jpg" id="amarillo">
         <img src="./img/rojo.jpg" id="rojo">

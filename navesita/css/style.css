@@ -12,13 +12,9 @@ body {
     overflow: hidden;
 }
 
-input, select, button {
+input, select, .boton1, .boton2 {
     margin: 10px;
     padding: 10px;
-}
-
-button {
-    cursor: pointer;
 }
 
 .header{
@@ -49,6 +45,28 @@ button {
     height: 30px;
 }
 
+.boton1{
+    background-image: url("../img/boton.png");
+}
+.boton2{
+    background-image: url("../img/boton2.png");
+    color: red;
+}
+
+.boton1, .boton2{
+    background-size: 100% 100%;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton1:active, .boton2:active{
+    opacity: 0.5;
+    color: chocolate;
+}
+
 #recursos{
     display: flex;
     flex-direction: column;
@@ -64,10 +82,18 @@ button {
     right: 45px;
     z-index: 10;
 }
+
+#botones .content{
+    display: flex;
+}
 #motor{
-    left:35%;
+    left:30%;
     position: fixed;
     bottom: 0;
+ }
+
+#motor .content{
+    display: flex;
  }
  #ubicacion-nav{
     position: absolute;
@@ -77,13 +103,14 @@ button {
  }
 #shield-interface,#propulsor-interface,#arma-interface,#motor-salto-interface{
     position: fixed;
-    top: 30%;
+    top: 25%;
     right: -30%;
     transition: 1s;
     transform: scale(1,0);
     opacity: 0;
     width: fit-content;
 }
+
 
 #shield-interface,#propulsor-interface,#arma-interface,#motor-salto-interface,#motor{
     z-index: 10;
@@ -132,6 +159,7 @@ button {
 .rojo{
     animation: avisar 2s 1;
 }
+
 
 #proyector{
     position: absolute;
