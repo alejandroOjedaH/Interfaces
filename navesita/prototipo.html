@@ -13,15 +13,15 @@
         <form id="main-screen-form">
                 <div id="recursos">
                     <div class="content">
-                        <div>
+                        <div class="corregirflex">
                             <label>Supervivientes:</label>
                             <meter id="survivor-meter" min="0" max="100"></meter><span id="survivor-meter-number" class="recursos"></span><br>
                         </div>
-                        <div>
+                        <div class="corregirflex">
                             <label>Energía:</label>
                             <meter id="energy-meter" min="0" max="100"></meter><span id="energy-meter-number" class="recursos"></span><br>
                         </div>
-                        <div>
+                        <div class="corregirflex">
                             <label>Integridad del casco:</label>
                             <meter id="damage-meter" min="0" max="100"></meter><span id="damage-meter-number" class="recursos"></span><br>
                         </div>
@@ -45,7 +45,7 @@
                 <div class="header"></div>
                 <div class="content">
                     <label>Recalentamiento del motor de salto:</label>
-                    <progress id="jump-progress" max="100"></progress><span id="jump-progress-number"></span><div class="boton1" onclick="saltoEmergencia()"></span>SALTO DE EMERGENCIA</div><br>
+                    <progress id="jump-progress" max="100"></progress><span id="jump-progress-number"></span><div class="salto" onclick="saltoEmergencia()"></span>SALTO DE EMERGENCIA</div><br>
                 </div>
             </div>
             
@@ -63,25 +63,32 @@
             <div class="header"><h2>Interfaz del Escudo</h2></div>
             
             <div class="content">
-                <label for="crew-member-function">Tripulantes:</label>
-                <div class="boton1">Añadir tripulante</div>
-                <select id="crew-member-function">
-                    <option value="disponible">Nuc Shazam</option>
-                    <option value="ocupado">Salt Peper</option>
-                    <option value="herido">Juan Salomón</option>
-                </select><br>
+                <div class="corregirflex">
+                    <label for="crew-member-function">Tripulantes:</label>
+                    <div class="boton1">Añadir tripulante</div>
+                    <select id="crew-member-function">
+                        <option value="disponible">Nuc Shazam</option>
+                        <option value="ocupado">Salt Peper</option>
+                        <option value="herido">Juan Salomón</option>
+                    </select><br>
+                </div>
                 
-                <label>Energía:</label>
-                <meter id="energy-meter" min="0" max="100" value="50"></meter><br>
-                
-                <label for="proa-shield">Proa:</label>
-                <input type="range" id="proa-shield" min="0" max="100" value="25"><br>
-                <label for="popa-shield">Popa:</label>
-                <input type="range" id="popa-shield" min="0" max="100" value="25"><br>
-                <label for="babor-shield">Babor:</label>
-                <input type="range" id="babor-shield" min="0" max="100" value="25"><br>
-                <label for="estribor-shield">Estribor:</label>
-                <input type="range" id="estribor-shield" min="0" max="100" value="25"><br>
+                <div class="corregirflex">
+                    <label for="proa-shield">Proa:</label>
+                    <input type="range" id="proa-shield" min="0" max="100" value="25"><br>
+                </div>
+                <div class="corregirflex">
+                    <label for="popa-shield">Popa:</label>
+                    <input type="range" id="popa-shield" min="0" max="100" value="25"><br>
+                </div>
+                <div class="corregirflex">
+                    <label for="babor-shield">Babor:</label>
+                    <input type="range" id="babor-shield" min="0" max="100" value="25"><br>
+                </div>
+                <div class="corregirflex">
+                    <label for="estribor-shield">Estribor:</label>
+                    <input type="range" id="estribor-shield" min="0" max="100" value="25"><br>
+                </div>
                 <div class="boton1">Igualar Todos</div>
                 <div class="volver-container"><div class="volver" onclick="ocultarTodasLasInterfaces()">Volver</div></div>
             </div>
@@ -93,25 +100,32 @@
             <div class="header"><h2>Interfaz del Propulsor</h2></div>
 			
             <div class="content">
-                <label for="crew-member-function">Tripulantes:</label>
-                <div class="boton1">Añadir tripulante</div>
-                <select id="crew-member-function">
-                    <option value="disponible">Nuc Shazam</option>
-                    <option value="ocupado">Salt Peper</option>
-                    <option value="herido">Juan Salomón</option>
-                </select><br>
+                <div class="corregirflex">
+                    <label for="crew-member-function">Tripulantes:</label>
+                    <div class="boton1">Añadir tripulante</div>
+                    <select id="crew-member-function">
+                        <option value="disponible">Nuc Shazam</option>
+                        <option value="ocupado">Salt Peper</option>
+                        <option value="herido">Juan Salomón</option>
+                    </select><br>
+                </div>
                 
-                <label>Energía:</label>
-                <meter id="energy-meter" min="0" max="100" ></meter><br>
-                
-                <label for="speed-slider">Velocidad:</label>
-                <input type="range" id="speed-slider" min="0" max="1000" value="100"><br>
-                <div class="boton1" id="sumarVel">+100 km/h</div>
-                <div class="boton1" id="restarVel">-100 km/h</div><br>
-                <label for="direction-slider">Dirección:</label>
-                <input type="range" id="direction-slider" min="-180" max="180"><br>
-                <div class="boton1">Girar Izquierda</div>
-                <div class="boton1">Girar Derecha</div><br>
+                <div class="corregirflex">
+                    <label for="speed-slider">Velocidad:</label>
+                    <input type="range" id="speed-slider" min="0" max="1000" value="100"><br>
+                </div>
+                <div class="corregirflex">
+                    <div class="boton1" id="sumarVel">+100 km/h</div>
+                    <div class="boton1" id="restarVel">-100 km/h</div><br>
+                </div>
+                <div class="corregirflex">
+                    <label for="direction-slider">Dirección:</label>
+                    <input type="range" id="direction-slider" min="-180" max="180"><br>
+                </div>
+                <div class="corregirflex">
+                    <div class="boton1">Girar Izquierda</div>
+                    <div class="boton1">Girar Derecha</div><br>
+                </div>
                 <div class="volver-container"><div class="volver" onclick="ocultarTodasLasInterfaces()">Volver</div></div>
             </div>
             <div class="footer"></div>
@@ -121,25 +135,27 @@
             <div class="header"><h2>Interfaz del Arma</h2></div>
 			 
             <div class="content">
-                <label for="crew-member-function">Tripulantes:</label>
-                <div class="boton1">Añadir tripulante</div>
-                <select id="crew-member-function">
-                    <option value="disponible">Nuc Shazam</option>
-                    <option value="ocupado">Salt Peper</option>
-                    <option value="herido">Juan Salomón</option>
-                </select><br>
-                
-                <label>Energía:</label>
-                <meter id="energy-meter" min="0" max="100" value="50"></meter><br>
-                
+                <div class="corregirflex">
+                    <label for="crew-member-function">Tripulantes:</label>
+                    <div class="boton1">Añadir tripulante</div>
+                    <select id="crew-member-function">
+                        <option value="disponible">Nuc Shazam</option>
+                        <option value="ocupado">Salt Peper</option>
+                        <option value="herido">Juan Salomón</option>
+                    </select><br>
+                </div>
                 <input type="radio" id="weapon1" name="weapon" checked>
                 <label for="weapon1">Láseres</label><br>
-                <input type="radio" id="weapon2" name="weapon">
-                <label for="weapon2">Misiles Nucleares</label><br>
-                <meter id="ammunition-meter" min="0" max="20"></meter><span id="ammunition-meter-number"></span><br>
-                <div class="boton1" id="disparar">Disparar</div>
-                <div class="boton1" id="recargarLase">Recargar</div><br>
-                <div class="boton1" id="cambiarArma">Cambiar Arma</div>
+                <div class="corregirflex">
+                    <input type="radio" id="weapon2" name="weapon">
+                    <label for="weapon2">Misiles Nucleares</label>
+                    <meter id="ammunition-meter" min="0" max="20"></meter><span id="ammunition-meter-number"></span><br>
+                </div>
+                <div class="corregirflex">
+                    <div class="boton1" id="disparar">Disparar</div>
+                    <div class="boton1" id="recargarLase">Recargar</div><br>
+                    <div class="boton1" id="cambiarArma">Cambiar Arma</div>
+                </div>
                 <div class="volver-container"><div class="volver" onclick="ocultarTodasLasInterfaces()">Volver</div></div>
             </div>
             <div class="footer"></div>
@@ -150,20 +166,21 @@
             <div class="header"><h2>Interfaz del Motor de Salto</h2></div>
 			
             <div class="content">
-                <label for="crew-member-function">Tripulantes:</label>
-                <div class="boton1">Añadir tripulante</div>
-                <select id="crew-member-function">
-                    <option value="disponible">Nuc Shazam</option>
-                    <option value="ocupado">Salt Peper</option>
-                    <option value="herido">Juan Salomón</option>
-                </select><br>
+                <div class="corregirflex">
+                    <label for="crew-member-function">Tripulantes:</label>
+                    <div class="boton1">Añadir tripulante</div>
+                    <select id="crew-member-function">
+                        <option value="disponible">Nuc Shazam</option>
+                        <option value="ocupado">Salt Peper</option>
+                        <option value="herido">Juan Salomón</option>
+                    </select><br>
+                </div>
+                <div class="corregirflex">
+                    <label for="proa-shield">Refrigerar motor:</label>
+                    <input type="range" id="refrigerar" min="0" max="10"><span id="refrigerar-number"></span><br>
+                </div>
                 
-                <label>Energía:</label>
-                <meter id="energy-meter" min="0" max="100" value="50"></meter><br>
-                <label for="proa-shield">Refrigerar motor:</label>
-                <input type="range" id="refrigerar" min="0" max="10"><span id="refrigerar-number"></span><br>
-                
-                <div class="volver-container"><div class="volver" onclick="ocultarTodasLasInterfaces()">Saltar</div></div>
+                <div class="volver-container"><div class="salto" onclick="ocultarTodasLasInterfaces()">Saltar</div></div>
             </div>
             <div class="footer"></div>
         </form>
@@ -177,14 +194,18 @@
                 <li>Integridad del casco: 10</li>
                 <li>Número de misiles: 2</li>
             </ul>
-            <div class="boton1" id="recursosAceptar">Aceptar</div>
+            <div class="corregirflex">
+                <div class="boton1" id="recursosAceptar">Aceptar</div>
+            </div>
         </div>
         <div class="footer"></div>
         </div>
         <div id="modalCombate" class="invisible">
             <div class="header"></div>
             <div class="content"><span>Te has encontrado con unos enemigos</span><br>
-                <div class="boton1" id="batallaAceptar">Aceptar</div>
+                <div class="corregirflex">
+                <div class="salto" id="batallaAceptar">Aceptar</div>
+            </div>
             </div>
             <div class="footer"></div>
         </div>
