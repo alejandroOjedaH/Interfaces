@@ -158,7 +158,7 @@ window.onload= () =>{
     }
     
     function setearMotor(){
-        const motorcapsule =document.getElementById("jump-progress");
+        const jumpProgress =document.getElementById("jump-progress");
         if(motorcont>0 && refrigerador.value ==0){
             motorcont--;
         }else if(motorcont>0){
@@ -170,11 +170,13 @@ window.onload= () =>{
         motor.value=motorcont;
         motorNumber.innerText=motorcont;
         if(motorcont>=50){
-            motorcapsule.style.textContent = "::webkit-progress-value { background-color: red; }";
+            jumpProgress.classList.add("rojobarra");
         } else if(motorcont>=25){
-            motorcapsule.style.textContent = '::webkit-progress-value { background-color: yellow; }';
+            jumpProgress.classList.remove("rojobarra");
+            jumpProgress.classList.add("amarillobarra");
         }else if(motorcont>=0){
-            motorcapsule.style.textContent = "::webkit-progress-value { background-color: aquamarine; }";
+            jumpProgress.classList.remove("amarillobarra");
+            jumpProgress.classList.add("azulbarra");
         }
         let t = setTimeout(function(){ setearMotor() }, 1000);
     }
