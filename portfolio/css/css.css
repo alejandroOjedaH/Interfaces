@@ -64,6 +64,15 @@ h2,h3{
 .seleccionado{
     background-color: chocolate;
 }
+
+
+.fotoContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 600px) {
     h1{
         font-size: 30px;
@@ -81,6 +90,9 @@ h2,h3{
     }
     a{
         font-size: 25px;
+    }
+    #foto{
+        width: 50%;
     }
 }
 
@@ -111,5 +123,8 @@ h2,h3{
     }
     .menu{
         width: 100%;
+    }
+    #foto{
+        width: 20%;
     }
 }
