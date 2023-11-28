@@ -2,8 +2,7 @@
     font-family: 'indie-flower';
     background-color: #FDFFA9;
     font-size: 25px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0px;
 }
 p{  
     margin-left: 15px;
@@ -67,8 +66,9 @@ body{
     .linea{
         display: block;
     }
-    body{
-        padding-left: 10px;
+    .ajustar{
+        margin-left: 5px;
+        margin-right: 5px;
     }
   }
 
@@ -83,7 +83,7 @@ body{
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: top;
-        
+        margin-left: 15px;
     }
     .vertical{
         display: column;
@@ -95,6 +95,7 @@ body{
         display: column;
         flex-direction: row;
         flex-wrap: nowrap;
+        margin-right: 15px;
     }
     h2{
         margin: 0;
