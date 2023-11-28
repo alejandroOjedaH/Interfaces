@@ -7,6 +7,9 @@ body{
     height: 419px;
 }
 
+.seleccionada{
+    pointer-events: none;
+}
 .seleccionada .trasera{
     transform: rotateY(180deg);
     opacity: 0;
