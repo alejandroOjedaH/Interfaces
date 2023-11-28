@@ -1,0 +1,115 @@
+*{
+    font-family: monospace;
+}
+body{
+    background-color: lightcoral;
+}
+
+a{
+    color: brown;
+    text-decoration: none;
+}
+p{
+    color: brown;
+}
+
+h1{
+    text-align: center;
+    color: crimson;
+}
+h2,h3{
+    color: lightpink;
+}
+
+.menu{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: solid 1px black;
+    background-color: coral;
+    transition: 1;
+}
+
+.menu:active{
+    opacity: 0.5;
+}
+
+.ico{
+    width: 30px;
+    height: 30px;
+}
+
+.red{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+.red a{
+    padding-left: 50px;
+}
+
+#header{
+    background-color: lightcoral;
+    position: sticky;
+    top:0;
+    bottom:0;
+}
+
+
+.invisible{
+    display: none;
+}
+
+.seleccionado{
+    background-color: chocolate;
+}
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 25px;
+    }
+    a{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 25px;
+    }
+    a{
+        font-size: 25px;
+    }
+
+    #header{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        
+    }
+    .menu{
+        width: 100%;
+    }
+}

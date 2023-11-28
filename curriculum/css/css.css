@@ -1,20 +1,17 @@
 *{
     font-family: 'indie-flower';
     background-color: #FDFFA9;
-    text-align: center;
-}
-p{
     font-size: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+p{  
     margin-left: 15px;
     margin-right: 15px;
 }
 @font-face {
     font-family: "indie-flower";
     src: url('../font/IndieFlower-Regular.ttf')
-}
-.nombre{
-    font-size: 35px;
-    margin-top: 40px;
 }
 #usuarioFoto{
     width: 35%;
@@ -26,19 +23,98 @@ h2{
     margin-left: 10%;
     margin-right: 10%;
 }
-#correoico{
-    width: 30px;
+#correoico, #telefonoico, .punto{
+    width: 15px;
+    height: 15px;
     margin-left: 20px;
     margin-right: 20px;
 }
-#telefonoico{
-    width: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.linea{
-    padding-left: 25px;
-    padding-right: 25px;
+.linea, .linea2{
+    margin-left: 15px;
+    margin-right: 25px;
     height: 30px;
-    width: 100%;
+    width: 95%;
+    display: none;
+}
+
+#telefono, #correo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.lista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#posit{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+body{
+    position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+    *{
+        text-align: center;
+    }
+    .linea{
+        display: block;
+    }
+    body{
+        padding-left: 10px;
+    }
+  }
+
+@media only screen and (min-width: 1025px) {
+    #usuarioFoto{
+        width: 7%;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .horizontal{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: top;
+        
+    }
+    .vertical{
+        display: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .vertical2{
+        display: column;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    h2{
+        margin: 0;
+    }
+    #cabecera{
+        align-items: end;
+        justify-content: space-between;
+    }
+    .linea2{
+        margin-left: 10%;
+        margin-right: 5px;
+        height: 30px;
+        width: 100%;
+        display: block;
+    }
+    .ajustar{
+        margin-left: 15%;
+    }
+    body{
+        overflow: hidden;
+        height:100%;
+    }
 }
