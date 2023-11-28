@@ -3,105 +3,57 @@ body{
 }
 .carta{
     width: 300px;
-    transition: transform 0.5s;
 }
 
-.carta:hover{
-    transform: rotateY(180deg);
-}
-.carta:hover .trasera{
-    opacity: 0;
-}
-
-#liliana{
-    margin: 0 auto;
-    width: 300px;
-    height: 419px;
-    background: url("liliana.png");
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotateY(180deg);
-}
-#emrakul{
-    margin: 0 auto;
-    width: 300px;
-    height: 419px;
-    background: url("emrakul.jpg");
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
+.seleccionada{
     transform: rotateY(180deg);
 }
 
-#decimodoctor{
-    margin: 0 auto;
-    width: 300px;
-    height: 419px;
-    background: url("decimodoctor.jpg");
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotateY(180deg);
+.lilianaani{
+    
 }
-#counterspell{
-    margin: 0 auto;
-    width: 300px;
-    height: 419px;
-    background: url("counter.jpg");
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotateY(180deg);
+.emrakulani{
+    
 }
-#montananevada{
-    margin: 0 auto;
-    width: 300px;
-    height: 419px;
-    background: url("liliana.png");
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotateY(180deg);
+
+.decimodoctorani{
+    
 }
-#ira{
-    margin: 0 auto;
-    width: 300px;
-    height: 419px;
-    background: url("ira.jpg");
-    background-size: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: rotateY(180deg);
+
+.counterspellani{
+
 }
+
+.montananevadaani{
+
+}
+.iraani{
+
+}
+
+
+
 .trasera{
     margin: 0 auto;
     width: 300px;
     height: 419px;
     background: url("mtg.jpg");
     background-size: contain;
-    position: absolute;
     top: 0;
     left: 0;
     background-repeat: no-repeat;
     background-position: center;
-    transition: opacity 0.3s;
+}
+
+#juego{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+@keyframes liliana {
+    100%{
+        background:url("liliana.png"); transform: rotateY(180deg);
+    }
 }
