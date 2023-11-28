@@ -2,47 +2,73 @@ body{
     margin: 0;
 }
 .carta{
-    width: 300px;
-}
-
-.seleccionada{
-    transform: rotateY(180deg);
-}
-
-.lilianaani{
-    
-}
-.emrakulani{
-    
-}
-
-.decimodoctorani{
-    
-}
-
-.counterspellani{
-
-}
-
-.montananevadaani{
-
-}
-.iraani{
-
-}
-
-
-
-.trasera{
-    margin: 0 auto;
+    position: relative;
     width: 300px;
     height: 419px;
+}
+
+.seleccionada .trasera{
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+.seleccionada .frontal{
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+
+.liliana{  
+    background: url("liliana.png");
+}
+.emrakul{    
+    background: url("emrakul.jpg");
+}
+
+.decimodoctor{    
+    background: url("decimodoctor.jpg");
+}
+
+.counterspell{    
+    background: url("counter.jpg");
+}
+
+.montananevada{    
+    background: url("montananevada.png");
+}
+.ira{    
+    background: url("ira.jpg");
+}
+
+.trasera{
+    margin: 0 auto;    
     background: url("mtg.jpg");
     background-size: contain;
     top: 0;
     left: 0;
     background-repeat: no-repeat;
     background-position: center;
+    position: absolute;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    transition: transform 1s, opacity 0s 0.3s
+}
+.frontal{
+    margin: 0 auto;    
+    background-size: contain;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width:100%;
+    height:100%;
+    pointer-events: none;
+    transition: transform 1s;
+    transform: rotateY(180deg);
+}
+
+.notocar{
+    pointer-events: none;
 }
 
 #juego{
@@ -50,10 +76,10 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
 }
-
-
-@keyframes liliana {
-    100%{
-        background:url("liliana.png"); transform: rotateY(180deg);
-    }
+#puntuacionContenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
 }
