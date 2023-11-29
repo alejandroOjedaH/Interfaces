@@ -8,10 +8,48 @@ ul{
 h2{
     color: #b4b4b4;
 }
-.cabezera1{
-    background-color: black;
-}
-.flex1{
+
+#header{
+    background-color: gray;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+
+#titulos h1{
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+#titulos h2{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: end;
+}
+
+#menu li{
+    background-color: black;
+    padding: 15px;
+    margin: 0;
+}
+
+#grande{
+    margin-top: 30px;
+}
+
+#contenido{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
 }
