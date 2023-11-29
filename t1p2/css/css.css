@@ -1,3 +1,7 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #header{
     padding-top: 16px;
     padding-left: 24px;
@@ -38,31 +42,30 @@ a{
     width: 100%;
     clear: left;
 }
-#rosaliaico{
+.rosaliaico{
     float: left;
     width: 40px;
     padding-top: 10px;
     padding-left: 10px;
 }
-#menu{
+.menu{
     float: right;
     width: 42px;
     padding-top: 10px;
 }
 
-#cuenta{
+.cuenta{
     float: left;
     margin-top: 7px;
     margin-left: 10px;
 }
 
-#seguir{
+.seguir{
     color: blue;
 }
 
-#usuario{
-    float: left;
-    width: 100%;
+#usuario, #usuario2,#comentarios{
+    display: none;
 }
 
 #fotoRosalia{
@@ -121,6 +124,11 @@ a{
         #buscar{
             display: none;
         }
+        #usuario{
+            display: block;
+            float: left;
+            width: 100%;
+        }
 }
 @media only screen and (min-width: 1025px) {
     #registro, #inicio, #separador, #footer{
@@ -131,6 +139,7 @@ a{
     }
     #logo{
         content: url("../img/logo2.png");
+        margin-bottom: 15px;
     }
     #buscar{
         text-align: center;
@@ -152,6 +161,7 @@ a{
         padding-top: 60px;
         width: 30%;
         float: left;
+        padding-left: 25%;
     }
 
     #usuario{
@@ -164,14 +174,50 @@ a{
     #iconos,#gusta,#fecha{
         clear: none;
         width: 100%;
-        clear: left;
     }
     
     #interaccion{
         padding: 10px;
-        margin-top: 33.8%;
         float: left;
         border: 1px solid lightgray;
+        width: 24%;
+    }
+
+    #usuario2{
+        display: block;
+        float: left;
         width: 25%;
+        border: 1px solid lightgray;
+        margin-top:3.2%;
+        padding-bottom: 5px;
+    }
+
+    #comentarios{
+        display: block;
+        float: left;
+        width: 25%;
+        border: 1px solid lightgray;
+        height: 523px;
+    }
+
+    #cuentacoment{
+        float: left;
+        margin-top: 7px;
+        margin-left: 10px;
+        width: 75%;
+    }
+    #usuariocoment{
+        float: left;
+        margin-top: 7px;
+        margin-left: 10px;
+        width: 75%;
+    }
+
+    #mas{
+        float: left;
+        clear: left;
+        margin:40px;
+        margin-left: 50%;
+        margin-right: 50%;
     }
 }
