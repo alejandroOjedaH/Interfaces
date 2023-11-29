@@ -6,6 +6,7 @@ body{
     animation: fondoradio 2s 1;
     animation-fill-mode: forwards;
     animation-delay: 7.5s;
+    overflow: hidden;
  }
 
 #bomba{

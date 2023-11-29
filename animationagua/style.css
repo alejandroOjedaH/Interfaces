@@ -2,9 +2,10 @@ body{
    background-image: url("agua.jpg");
    background-repeat: no-repeat;
    background-size: cover;
+   overflow: hidden;
 }
 
-#gota{
+#gota1{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -14,6 +15,56 @@ body{
     border-radius: 100%;
     animation: goteo 4s infinite;
 }
+#gota2{
+    position: absolute;
+    left: 35%;
+    top: 75%;
+    width: 60px;
+    height: 60px;
+    border: solid 1px aquamarine;
+    border-radius: 100%;
+    animation: goteo 3s infinite;
+}
+#gota3{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    width: 60px;
+    height: 60px;
+    border: solid 1px aquamarine;
+    border-radius: 100%;
+    animation: goteo 7s infinite;
+}
+#gota4{
+    position: absolute;
+    left: 90%;
+    top: 85%;
+    width: 60px;
+    height: 60px;
+    border: solid 1px aquamarine;
+    border-radius: 100%;
+    animation: goteo 2s infinite;
+}
+#gota5{
+    position: absolute;
+    left: 75%;
+    top: 25%;
+    width: 60px;
+    height: 60px;
+    border: solid 1px aquamarine;
+    border-radius: 100%;
+    animation: goteo 10s infinite;
+}#gota6{
+    position: absolute;
+    left: 60%;
+    top: 30%;
+    width: 60px;
+    height: 60px;
+    border: solid 1px aquamarine;
+    border-radius: 100%;
+    animation: goteo 7s infinite;
+}
+
 
 @keyframes goteo {
     0%{scale: 0.1;}
