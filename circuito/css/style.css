@@ -18,6 +18,10 @@ body{
     height: fit-content;
     top:650px;
     left: 200px;
+    
+}
+
+#cochecontainer:hover{
     animation: movimiento 1 10s linear;
     animation-fill-mode: forwards;
 }
@@ -25,11 +29,14 @@ body{
     position: absolute;
     width: 50px;
     opacity: 0;
+    top: 10px;
+    left: 3px;
+}
+
+#stun:hover{
     animation: stuneado 1 3s linear;
     animation-fill-mode: forwards;
     animation-delay: 3.3s;
-    top: 10px;
-    left: 3px;
 }
 
 @keyframes stuneado {
