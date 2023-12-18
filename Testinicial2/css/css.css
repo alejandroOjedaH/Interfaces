@@ -1,0 +1,166 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: condensed;
+}
+
+#header {
+    background-color: #1d1d1d;
+    margin-left: 33px;
+    margin-right: 20px;
+}
+
+#header h1 a,
+header h1 a:visited {
+    color: white;
+}
+
+h2 {
+    color: #b18f85;
+    margin-bottom: 0px;
+}
+
+li {
+    list-style: circle;
+}
+
+#menubar {
+    background-color: #2d2d2d;
+}
+
+#menubar ul li {
+    float: right;
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 11px;
+    padding-top: 11px;
+    background-color: #5f4236;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#menubar ul li a:link,
+#menubar ul li:link {
+    color: white;
+}
+
+#menubar ul li a:visited,
+#menubar ul li:visited {
+    color: white;
+}
+
+#menubar ul li a:hover,
+#menubar ul li:hover {
+    background-color: #b68a79;
+}
+
+#menu {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    float: right;
+    background-color: #2d2d2d;
+    margin-left: 33px;
+    width: 100%;
+}
+
+#sidebar_container {
+    margin-top: 25px;
+    float: left;
+    margin-left: 33px;
+    width: 11%;
+}
+
+#content {
+    float: left;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+#content_footer {
+    clear: left;
+}
+
+h3 {
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+h4 {
+    color: #b18f85;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+h5 {
+    margin-top: 0px;
+    color: #9b948e;
+}
+
+.sidebar {
+    border: lightgray 1px solid;
+    border-radius: 25px;
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: #9b948e;
+    text-decoration: underline;
+}
+
+
+#banner {
+    margin-top: 70px;
+    margin-left: 33px;
+    margin-right: 100px;
+    width: 96%;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+#content h2 {
+    margin-top: 50px;
+}
+
+#banner img {
+    width: 100%;
+}
+
+#footer {
+    text-align: center;
+    width: 98%;
+    height: 90px;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 33px;
+    background-color: #1d1d1d;
+    color: white;
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    #header{
+        margin: 0;
+    }
+    #banner{
+        width: 86%;
+        margin-top: 25%;
+    }
+    #sidebar_container{
+        width: 90%;
+    }
+
+    #footer{
+        width: 90%;
+    }
+}
