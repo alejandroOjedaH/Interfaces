@@ -26,32 +26,32 @@ body {
   
   #layer_0 {
     background-image: url("../img/parallax0.png");
-    transform: translateZ(-450px) scale(5.5);
+    transform: translateZ(-400px) scale(5.5);
   }
   
   #layer_1 {
     background-image: url("../img/parallax1.png");
-    transform: translateZ(-400px) scale(5);
+    transform: translateZ(-350px) scale(5);
   }
   
   #layer_2 {
     background-image: url("../img/parallax2.png");
-    transform: translateZ(-350px) scale(4.5);
+    transform: translateZ(-300px) scale(4.5);
   }
   
   #layer_3 {
     background-image: url("../img/parallax3.png");
-    transform: translateZ(-300px) scale(4);
+    transform: translateZ(-250px) scale(4);
   }
   
   #layer_4 {
     background-image: url("../img/parallax4.png");
-    transform: translateZ(-250px) scale(3.5);
+    transform: translateZ(-200px) scale(3.5);
   }
   
   #layer_5 {
     background-image: url("../img/parallax5.png");
-    transform: translateZ(-200px) scale(2.5);
+    transform: translateZ(-150px) scale(2.5);
   }
   
   #layer_6 {
